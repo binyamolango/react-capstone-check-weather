@@ -4,7 +4,7 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Space Travelers' Hub
+# Check Weather
 
 </div>
 
@@ -36,14 +36,14 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Space Travelers' Hub <a name="about-project"></a>
+# 📖 Check Weather <a name="about-project"></a>
 
-> **Space Travelers' Hub** is a website that will be working with the real live data from the SpaceX API for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+> **Check Weather** is a mobile web application that lets the user check the weather conditions of any city around the globe.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-- ReactJs
-- Javascript
+- React
+- Redux
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -56,9 +56,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Fetch and render Missions & Rockets data.**
-- **Join/Leave Missions.**
-- **Reserve/Cancel reservation of Rockets.**
+- **Search for any city to check the weather conditions**
+- **Fetch and render the weather conditions**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +77,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+If you want to get a local copy up and running, please follow these steps.
 
 ### Prerequisites
 
@@ -98,7 +97,7 @@ In order to run this project you need:
 - [ ] Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/yusufyusie/space-travelers-hub.git
+git clone https://github.com/binyamolango/react-capstone-check-weather.git
 ```
 
 ```
@@ -147,19 +146,7 @@ npm run build
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
-
-👤 **yesuf Fenta**
-
-- GitHub: [@yusufyusie](https://github.com/yusufyusie)
-- Twitter: [@yusufyusiee](https://twitter.com/yusufyusiee)
-- LinkedIn: [Yesuf Fenta](https://www.linkedin.com/in/yusufyusie/)
-
-👤 **May Pyone**
-
-- GitHub: [@githubhandle](https://github.com/MayPyone)
-- Twitter: [@twitterhandle](https://twitter.com/maypyone015)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/may-pyone-9439961a3/)
+## 👥 Author <a name="authors"></a>
 
 👤 **Binyam Yohannes**
 

@@ -3,8 +3,8 @@ import { setLocation } from "../../redux/form/formSlice";
 import { useState } from "react";
 
 const Form = () => {
-  const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState('');
+  const dispatch = useDispatch();
 
   const submitHandler = (e) => {
     e.preventDefault();

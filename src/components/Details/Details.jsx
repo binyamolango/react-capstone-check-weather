@@ -21,7 +21,7 @@ const Details = () => {
 
   return (
     <>
-      <p> { details.main.temp } </p>
+      <p> { details.main && details.main.temp } </p>
       <Link to="/"><button>Go Back</button></Link>
     </>
   );

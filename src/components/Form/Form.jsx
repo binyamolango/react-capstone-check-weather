@@ -6,13 +6,13 @@ const Form = () => {
   const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
 
+  const changeHandler = (e) => {
+    setInputValue(e.target.value);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(setLocation(inputValue));
-  };
-
-  const changeHandler = (e) => {
-    setInputValue(e.target.value);
   };
 
   return (

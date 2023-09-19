@@ -31,7 +31,7 @@ const homeSlice = createSlice({
       .addCase(fetchLocation.fulfilled, (state, action) => {
         state.loading = false;
         state.location = action.payload;
-        state.error = '';
+        state.error = action.payload.length === 0 ? "No result found!" : '';
       })
       .addCase(fetchLocation.rejected, (state, action) => {
         state.loading = false;

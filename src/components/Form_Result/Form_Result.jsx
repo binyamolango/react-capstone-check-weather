@@ -5,17 +5,21 @@ import { useEffect } from 'react';
 
 const Form_Result = () => {
   const location = useSelector((state) => state.form.location);
-  const city = useSelector((state) => state.home.location[0]);
+  const city = useSelector((state) => state.home.location);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchLocation(location));
-  }, [dispatch])
+  }, [dispatch, location])
 
   return (
     <>
-      <h1>{ city.name }</h1>
-      {/* <p> longitude: { city.lon }, latitude: { city.lat } </p> */}
+      { city.length === 0 ? null : (
+        <>
+          <h1> {city[0].name}, { city[0].state && city[0].state }, { city[0].country && city[0].country } </h1>
+          <p> longitude: {city[0].lon}, latitude: {city[0].lat} </p>
+        </>
+      ) }
       <Link to="/Details"><button>See Details</button></Link>
     </>
   );

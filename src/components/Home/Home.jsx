@@ -1,14 +1,12 @@
-import Form from "../Form/Form";
-import Form_Result from "../Form_Result/Form_Result";
+import Form from '../Form/Form';
+import FormResult from '../FormResult/FormResult';
 
-const Home = () => {
-  return (
-    <>
-      <h1>Home</h1>
-      <Form />
-      <Form_Result />
-    </>
-  );
-}
- 
+const Home = () => (
+  <>
+    <h1>Home</h1>
+    <Form />
+    <FormResult />
+  </>
+);
+
 export default Home;

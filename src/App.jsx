@@ -1,6 +1,6 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Details from "./components/Details/Details";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Details from './components/Details/Details';
 import Home from './components/Home/Home';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

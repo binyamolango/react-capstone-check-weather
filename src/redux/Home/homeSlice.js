@@ -1,6 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
+import axios from 'axios';
 
 const apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?';
 
@@ -31,13 +31,13 @@ const homeSlice = createSlice({
       .addCase(fetchLocation.fulfilled, (state, action) => {
         state.loading = false;
         state.location = action.payload;
-        state.error = action.payload.length === 0 ? "No result found!" : '';
+        state.error = action.payload.length === 0 ? 'No result found!' : '';
       })
       .addCase(fetchLocation.rejected, (state, action) => {
         state.loading = false;
         state.location = [];
         state.error = action.error.message;
-      })
+      });
   },
 });
 

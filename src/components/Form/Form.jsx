@@ -1,6 +1,6 @@
-import { useDispatch } from "react-redux";
-import { setLocation } from "../../redux/form/formSlice";
-import { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { setLocation } from '../../redux/form/formSlice';
 
 const Form = () => {
   const [inputValue, setInputValue] = useState('');
@@ -18,12 +18,20 @@ const Form = () => {
   return (
     <>
       <form onSubmit={submitHandler}>
-        <label htmlFor="location">Enter city and country code: </label>
-        <input type="text" id="location" placeholder="london,GB" required onChange={changeHandler} />
+        <label htmlFor="location">
+          Enter city and country code:
+          <input
+            type="text"
+            id="location"
+            placeholder="london,GB"
+            required
+            onChange={changeHandler}
+          />
+        </label>
         <button type="submit">Search</button>
       </form>
     </>
   );
-}
+};
 
 export default Form;

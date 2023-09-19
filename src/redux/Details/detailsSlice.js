@@ -1,6 +1,6 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-import axios from "axios";
+import axios from 'axios';
 
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?';
 const apiKey = '2232c5e8aed5dbe6ed27ba7903d26b62';
@@ -32,13 +32,13 @@ const detailsSlice = createSlice({
       .addCase(fetchDetails.fulfilled, (state, action) => {
         state.loading = false;
         state.details = action.payload;
-        state.error = action.payload.length === 0 ? "Result not found!" : '';
+        state.error = action.payload.length === 0 ? 'Result not found!' : '';
       })
       .addCase(fetchDetails.rejected, (state, action) => {
         state.loading = false;
         state.details = [];
         state.error = action.error.message;
-      })
+      });
   },
 });
 

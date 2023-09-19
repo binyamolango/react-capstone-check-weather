@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchDetails } from '../../redux/Details/detailsSlice';
 
 const Details = () => {
@@ -21,10 +21,14 @@ const Details = () => {
 
   return (
     <>
-      <p> { details.main && details.main.temp } </p>
-      <Link to="/"><button>Go Back</button></Link>
+      <p>
+        {' '}
+        { details.main && details.main.temp }
+        {' '}
+      </p>
+      <Link to="/"><button type='button'>Go Back</button></Link>
     </>
   );
-}
- 
+};
+
 export default Details;

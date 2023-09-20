@@ -36,7 +36,7 @@ describe('Form', () => {
     );
 
     const inputField = screen.getByPlaceholderText('london,GB');
-    const testValue = 'New York,US';
+    const testValue = 'new york,US';
 
     expect(inputField.value).toBe('');
 

@@ -12,13 +12,19 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^6.1.3",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^13.5.0",
     "@vitejs/plugin-react": "^4.0.3",
     "axios": "^1.5.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
     "react-router-dom": "^6.16.0",
+    "react-scripts": "^2.1.3",
     "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
     "vite": "^4.4.5"
   },
   "devDependencies": {
@@ -27,8 +33,6 @@
     "@babel/plugin-syntax-jsx": "^7.22.5",
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-react": "^7.22.15",
-    "@testing-library/jest-dom": "^6.1.3",
-    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "eslint": "^7.32.0",

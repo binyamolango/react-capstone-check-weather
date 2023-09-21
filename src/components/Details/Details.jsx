@@ -1,6 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { fetchDetails } from '../../redux/Details/detailsSlice';
 import style from './Details.module.css';
 import Search from '../Search/Search';
@@ -23,7 +26,21 @@ const Details = () => {
 
   return (
     <div className={style.detailsPage}>
-      <Search />
+      <Search
+        brandName={(
+          <>
+            <Link to="/">
+              <FontAwesomeIcon
+                icon={faArrowLeft}
+                style={{ color: 'black', marginRight: '0.5em' }}
+              />
+            </Link>
+            { city && city[0] && city[0].name }
+            {', '}
+            { city && city[0] && city[0].country }
+          </>
+)}
+      />
       <p>
         {' '}
         { details && details.main && details.main.temp }
@@ -32,7 +49,6 @@ const Details = () => {
         {' '}
         { details && details.weather && details.weather[0] && details.weather[0].description }
       </p>
-      <Link to="/"><button type="button">Go Back</button></Link>
     </div>
   );
 };

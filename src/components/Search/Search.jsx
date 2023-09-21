@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -9,7 +10,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { setLocation } from '../../redux/form/formSlice';
 
-const Search = () => {
+const Search = ({ brandName }) => {
   const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
 
@@ -26,7 +27,9 @@ const Search = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand href="#" style={{ fontWeight: '500', fontSize: '1.5rem' }}>Check Current Weather</Navbar.Brand>
+          <Navbar.Brand href="#" style={{ fontWeight: '500', fontSize: '1.5rem' }}>
+            {brandName}
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -54,6 +57,10 @@ const Search = () => {
       </Navbar>
     </>
   );
+};
+
+Search.propTypes = {
+  brandName: PropTypes.string.isRequired,
 };
 
 export default Search;

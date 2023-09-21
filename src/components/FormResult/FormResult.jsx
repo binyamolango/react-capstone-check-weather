@@ -147,7 +147,7 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card style={{ background: '#418bab', color: 'white' }}>
+            <Card style={{ background: '#418bab4d', color: 'white' }}>
               <Card.Header>
                 Wind Speed
                 (m/s)
@@ -159,7 +159,7 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card style={{ background: '#4380cb', color: 'white' }}>
+            <Card style={{ background: '#4380cb4d', color: 'white' }}>
               <Card.Header>
                 Cloudiness
                 (%)
@@ -173,7 +173,7 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card style={{ background: '#4380cb4d', color: 'white' }}>
+            <Card style={{ background: '#4380cb', color: 'white' }}>
               <Card.Header>
                 Rain Volume
                 (mm)
@@ -185,7 +185,7 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card style={{ background: '#418bab4d', color: 'white' }}>
+            <Card style={{ background: '#418bab', color: 'white' }}>
               <Card.Header>
                 Wind Direction
                 (deg)

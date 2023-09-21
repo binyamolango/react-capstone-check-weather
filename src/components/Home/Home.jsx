@@ -5,7 +5,9 @@ import style from './Home.module.css';
 
 const Home = () => (
   <div className={style.home}>
-    <Search />
+    <Search
+      brandName="Check Current Weather"
+    />
     <FormResult />
     <Footer />
   </div>

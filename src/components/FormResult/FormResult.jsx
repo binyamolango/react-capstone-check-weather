@@ -5,6 +5,9 @@ import { fetchLocation } from '../../redux/Home/homeSlice';
 import { fetchDetails } from '../../redux/Details/detailsSlice';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const FormResult = () => {
   const location = useSelector((state) => state.form.location);
@@ -30,16 +33,17 @@ const FormResult = () => {
   return (
     <>
       { city.length === 0 ? null : (
+        <>
         <div>
           <h1>
             {' '}
             {city[0].name}
             ,
             {' '}
-            { city[0].state && city[0].state }
+            {city[0].state && city[0].state}
             ,
             {' '}
-            { city[0].country && city[0].country }
+            {city[0].country && city[0].country}
             {' '}
           </h1>
           <p>
@@ -48,42 +52,48 @@ const FormResult = () => {
             , lat:{' '}
             {city[0].lat}
           </p>
-          <div>
-            <p>
-              { details && details.weather && details.weather[0] && details.weather[0].description }
-            </p>
-            <p>
-              Weather Condition
-            </p>
-          </div>
-          <div>
-            <p>
-              { details && details.main && details.main.temp }
-              {' '}
-            </p>
-            <p>
-              Temp{'(deg)'}
-            </p>
-          </div>
-          <div>
-            <p>
-              { details && details.main && details.main.pressure }
-              {' '}
-            </p>
-            <p>
-              Pressure{'(hPa)'}
-            </p>
-          </div>
-          <div>
-            <p>
-              { details && details.main && details.main.humidity }
-              {' '}
-            </p>
-            <p>
-              Temp{'(%)'}
-            </p>
-          </div>
         </div>
+        <Container>
+          <Row>
+            <Col>
+              <p>
+                {details && details.weather && details.weather[0] && details.weather[0].description}
+              </p>
+              <p>
+                Weather Condition
+              </p>
+            </Col>
+            <Col>
+              <p>
+                {details && details.main && details.main.temp}
+                {' '}
+              </p>
+              <p>
+                Temp{'(deg)'}
+              </p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p>
+                {details && details.main && details.main.pressure}
+                {' '}
+              </p>
+              <p>
+                Pressure{'(hPa)'}
+              </p>
+            </Col>
+            <Col>
+              <p>
+                {details && details.main && details.main.humidity}
+                {' '}
+              </p>
+              <p>
+                Temp{'(%)'}
+              </p>
+            </Col>
+          </Row>
+        </Container></>
       ) }
       <Link to="/Details"><button type="button">See Details</button></Link>
     </>

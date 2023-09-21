@@ -26,7 +26,7 @@ const Search = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href="#">Check Current Weather</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -34,20 +34,20 @@ const Search = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
               <Nav.Link href="#" disabled>
-                Enter city name and country code:
+                Search by City Name and Country Code
               </Nav.Link>
             </Nav>
             <Form className="d-flex" onSubmit={submitHandler}>
-              <Form.Control
+              <input
+                style={{ width: '100%', border: 'none', padding: '0.5em' }}
                 type="search"
                 placeholder="London,GB"
                 className="me-2"
                 aria-label="London,GB"
                 onChange={changeHandler}
               />
-              <Button variant="outline-success">Search</Button>
+              <Button type="submit" variant="outline-success">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

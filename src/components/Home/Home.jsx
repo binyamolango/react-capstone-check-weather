@@ -27,9 +27,7 @@ const Home = () => {
   return (
     <>
       <Search />
-      <h1>Home</h1>
       <div>
-        <h3>Current time and date:</h3>
         <p> { formattedDate } </p>
       </div>
       <FormResult />

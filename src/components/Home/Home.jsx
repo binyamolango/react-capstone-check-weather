@@ -1,12 +1,16 @@
-import Form from '../Form/Form';
+import Footer from '../Footer/Footer';
 import FormResult from '../FormResult/FormResult';
+import Search from '../Search/Search';
+import style from './Home.module.css';
 
 const Home = () => (
-  <>
-    <h1>Home</h1>
-    <Form />
+  <div className={style.home}>
+    <Search
+      brandName="Check Current Weather"
+    />
     <FormResult />
-  </>
+    <Footer />
+  </div>
 );
 
 export default Home;

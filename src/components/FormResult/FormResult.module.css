@@ -1,0 +1,7 @@
+.card {
+  color: white;
+}
+
+.card:hover {
+  opacity: 0.7;
+}

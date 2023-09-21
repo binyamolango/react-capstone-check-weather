@@ -7,7 +7,7 @@ const apiKey = '2232c5e8aed5dbe6ed27ba7903d26b62';
 
 const fetchDetails = createAsyncThunk('details/fetchDetails', async ({ lat, lon }) => {
   try {
-    const response = await axios.get(`${apiUrl}lat=${lat}&lon=${lon}&appid=${apiKey}`);
+    const response = await axios.get(`${apiUrl}lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
     return response.data;
   } catch (error) {
     throw new Error(error.message);

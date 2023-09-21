@@ -11,6 +11,7 @@ import Button from 'react-bootstrap/Button';
 import blueBG from '../../assets/blueBackground.png';
 import { fetchDetails } from '../../redux/Details/detailsSlice';
 import { fetchLocation } from '../../redux/Home/homeSlice';
+import style from './FormResult.module.css';
 
 const FormResult = () => {
   const location = useSelector((state) => state.search.location);
@@ -99,7 +100,7 @@ const FormResult = () => {
       <Container fluid="true">
         <Row>
           <Col>
-            <Card style={{ background: '#418bab', color: 'white' }}>
+            <Card className={style.card} style={{ background: '#418bab' }}>
               <Card.Header>Weather Condition</Card.Header>
               <Card.Body>
                 <Card.Title>
@@ -114,7 +115,7 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card style={{ background: '#4380cb', color: 'white' }}>
+            <Card className={style.card} style={{ background: '#4380cb' }}>
               <Card.Header>
                 Temp
                 (Celsius)
@@ -128,7 +129,7 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card style={{ background: '#4380cb4d', color: 'white' }}>
+            <Card className={style.card} style={{ background: '#4380cb4d' }}>
               <Card.Header>
                 Pressure
                 (hPa)
@@ -140,7 +141,7 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card style={{ background: '#418bab4d', color: 'white' }}>
+            <Card className={style.card} style={{ background: '#418bab4d' }}>
               <Card.Header>
                 Humidity
                 (%)
@@ -154,7 +155,7 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card style={{ background: '#418bab', color: 'white' }}>
+            <Card className={style.card} style={{ background: '#418bab' }}>
               <Card.Header>
                 Wind Speed
                 (m/s)
@@ -166,7 +167,7 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card style={{ background: '#4380cb', color: 'white' }}>
+            <Card className={style.card} style={{ background: '#4380cb' }}>
               <Card.Header>
                 Cloudiness
                 (%)
@@ -180,7 +181,7 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card style={{ background: '#4380cb4d', color: 'white' }}>
+            <Card className={style.card} style={{ background: '#4380cb' }}>
               <Card.Header>
                 Rain Volume
                 (mm)
@@ -192,7 +193,7 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card style={{ background: '#418bab4d', color: 'white' }}>
+            <Card className={style.card} style={{ background: '#418bab4d' }}>
               <Card.Header>
                 Wind Direction
                 (deg)

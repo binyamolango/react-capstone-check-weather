@@ -86,6 +86,13 @@ const FormResult = () => {
             {' '}
             {city && city[0] && city[0].lat}
           </Card.Text>
+          <Card.Text>
+            <div>
+              <Link to="/Details">
+                <Button type="button" variant="primary">See Details</Button>
+              </Link>
+            </div>
+          </Card.Text>
         </Card.ImgOverlay>
       </Card>
       <br />
@@ -179,7 +186,7 @@ const FormResult = () => {
                 (mm)
               </Card.Header>
               <Card.Body>
-                <Card.Title>{details && details.rain ? details.rain['1h'] : <>0</> }</Card.Title>
+                <Card.Title>{details && details.rain ? details.rain['1h'] : <>-</> }</Card.Title>
               </Card.Body>
             </Card>
             <br />
@@ -198,11 +205,6 @@ const FormResult = () => {
           </Col>
         </Row>
       </Container>
-      <div style={{ textAlign: 'center' }}>
-        <Link to="/Details">
-          <Button type="button" variant="primary">See more</Button>
-        </Link>
-      </div>
       <br />
     </div>
   );

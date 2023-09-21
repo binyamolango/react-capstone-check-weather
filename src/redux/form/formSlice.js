@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const formSlice = createSlice({
-  name: 'form',
+  name: 'search',
   initialState,
   reducers: {
     setLocation: (state, action) => {

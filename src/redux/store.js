@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 
 const store = configureStore({
   reducer: {
-    form: formReducer,
+    search: formReducer,
     home: homeReducer,
     details: detailsReducer,
   },

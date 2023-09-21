@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Form from "../components/Form/Form";
+import Search from "../components/Search/Search";
 import mockStore from '../__mocks__/reduxMock';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
@@ -12,17 +12,17 @@ const initialState = {
 
 const store = mockStore(initialState);
 
-describe('Form', () => {
-  it('renders the search form with an input field', () => {
+describe('Search', () => {
+  it('renders the search Search with an input field', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <Form />
+          <Search />
         </BrowserRouter>
       </Provider>
     );
 
-    const inputField = screen.getByPlaceholderText('london,GB');
+    const inputField = screen.getByPlaceholderText('London,GB');
     expect(inputField).toBeInTheDocument();
   });
 
@@ -30,12 +30,12 @@ describe('Form', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <Form />
+          <Search />
         </BrowserRouter>
       </Provider>
     );
 
-    const inputField = screen.getByPlaceholderText('london,GB');
+    const inputField = screen.getByPlaceholderText('London,GB');
     const testValue = 'new york,US';
 
     expect(inputField.value).toBe('');
@@ -45,16 +45,16 @@ describe('Form', () => {
     expect(inputField.value).toBe(testValue);
   });
 
-  it('dispatches the setLocation action on form submission', () => {
+  it('dispatches the setLocation action on Search submission', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <Form />
+          <Search />
         </BrowserRouter>
       </Provider>
     );
 
-    const inputField = screen.getByPlaceholderText('london,GB');
+    const inputField = screen.getByPlaceholderText('London,GB');
     const submitButton = screen.getByRole('button', { name: 'Search' });
 
     const testValue = 'Paris,FR';
@@ -63,7 +63,7 @@ describe('Form', () => {
     userEvent.click(submitButton);
 
     expect(store.getActions()).toEqual([
-      { type: 'form/setLocation', payload: testValue },
+      { type: 'search/setLocation', payload: testValue },
     ]);
   });
 });

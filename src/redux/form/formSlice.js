@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  location: 'london,GB',
+  location: 'addis ababa,ET',
 };
 
 const formSlice = createSlice({

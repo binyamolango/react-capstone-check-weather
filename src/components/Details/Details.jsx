@@ -23,8 +23,10 @@ const Details = () => {
     <>
       <p>
         {' '}
-        { details.main && details.main.temp }
+        { details && details.main && details.main.temp }
         {' '}
+        deg,{' '}
+        { details && details.weather && details.weather[0] && details.weather[0].description }
       </p>
       <Link to="/"><button type='button'>Go Back</button></Link>
     </>

@@ -55,7 +55,7 @@ const FormResult = () => {
 
   return (
     <div>
-      <Card className="bg-dark text-white">
+      <Card className="bg-light text-white">
         <Card.Img src={blueBG} alt="Card image" />
         <Card.ImgOverlay>
           <Card.Text>{ formattedDate }</Card.Text>
@@ -84,60 +84,76 @@ const FormResult = () => {
               {city && city[0] && city[0].lat}
             </p>
           </Card.Text>
-          <Card.Text>
-            <div style={{textAlign: 'center'}}>
-              <Link to="/Details">
-                <Button type="button" variant="secondary">See Details</Button>{' '}
-              </Link>
-            </div>
-          </Card.Text>
         </Card.ImgOverlay>
       </Card>
       <br />
-      {
-        <Container>
-          <Row>
-            <Col>
-              <Card border="dark">
-                <Card.Header>Weather Condition</Card.Header>
-                <Card.Body>
-                  <Card.Title>{details && details.weather && details.weather[0] && details.weather[0].description}</Card.Title>
-                </Card.Body>
-              </Card>
-              <br />
-            </Col>
-            <Col>
-              <Card border="dark">
-                <Card.Header>Temp{'(Celsius)'}</Card.Header>
-                <Card.Body>
-                  <Card.Title>{details && details.main && details.main.temp}</Card.Title>
-                </Card.Body>
-              </Card>
-              <br />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Card border="dark">
-                <Card.Header>Pressure{'(hPa)'}</Card.Header>
-                <Card.Body>
-                  <Card.Title>{details && details.main && details.main.pressure}</Card.Title>
-                </Card.Body>
-              </Card>
-              <br />
-            </Col>
-            <Col>
-              <Card border="dark">
-                <Card.Header>Humidity{'(%)'}</Card.Header>
-                <Card.Body>
-                  <Card.Title>{details && details.main && details.main.humidity}</Card.Title>
-                </Card.Body>
-              </Card>
-              <br />
-            </Col>
-          </Row>
-        </Container>
-      }
+      <Container-fluid>
+        <Row>
+          <Col>
+            <Card style={{background: '#418bab', color: 'white'}}>
+              <Card.Header>Weather Condition</Card.Header>
+              <Card.Body>
+                <Card.Title>{details && details.weather && details.weather[0] && details.weather[0].description}</Card.Title>
+              </Card.Body>
+            </Card>
+            <br />
+          </Col>
+          <Col>
+            <Card style={{background: '#4380cb', color: 'white'}}>
+              <Card.Header>Temp{'(Celsius)'}</Card.Header>
+              <Card.Body>
+                <Card.Title>{details && details.main && details.main.temp}</Card.Title>
+              </Card.Body>
+            </Card>
+            <br />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Card style={{background: '#4380cb', color: 'white'}}>
+              <Card.Header>Pressure{'(hPa)'}</Card.Header>
+              <Card.Body>
+                <Card.Title>{details && details.main && details.main.pressure}</Card.Title>
+              </Card.Body>
+            </Card>
+            <br />
+          </Col>
+          <Col>
+            <Card style={{background: '#418bab', color: 'white'}}>
+              <Card.Header>Humidity{'(%)'}</Card.Header>
+              <Card.Body>
+                <Card.Title>{details && details.main && details.main.humidity}</Card.Title>
+              </Card.Body>
+            </Card>
+            <br />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Card style={{background: '#418bab', color: 'white'}}>
+              <Card.Header>Wind Speed{'(m/s)'}</Card.Header>
+              <Card.Body>
+                <Card.Title>{details && details.wind && details.wind.speed}</Card.Title>
+              </Card.Body>
+            </Card>
+            <br />
+          </Col>
+          <Col>
+            <Card style={{background: '#4380cb', color: 'white'}}>
+              <Card.Header>Cloudiness{'(%)'}</Card.Header>
+              <Card.Body>
+                <Card.Title>{details && details.clouds && details.clouds.all}</Card.Title>
+              </Card.Body>
+            </Card>
+            <br />
+          </Col>
+        </Row>
+      </Container-fluid>
+      <div style={{textAlign: 'center'}}>
+        <Link to="/Details">
+          <Button type="button" variant="primary">See Details</Button>{' '}
+        </Link>
+      </div>
     </div>
   );
 };

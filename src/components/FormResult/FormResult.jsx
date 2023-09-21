@@ -155,7 +155,7 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card className={style.card} style={{ background: '#418bab' }}>
+            <Card className={style.card} style={{ background: '#418bab4d' }}>
               <Card.Header className={style.cardHeader}>
                 Wind Speed
                 (m/s)
@@ -193,7 +193,7 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card className={style.card} style={{ background: '#418bab4d' }}>
+            <Card className={style.card} style={{ background: '#418bab' }}>
               <Card.Header className={style.cardHeader}>
                 Wind Direction
                 (deg)

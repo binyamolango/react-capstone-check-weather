@@ -54,7 +54,7 @@ const FormResult = () => {
   }, [dispatch, lat, lon]);
 
   return (
-    <div>
+    <div style={{background: 'linear-gradient(to right, #418bab, #4380cb)'}}>
       <Card className="bg-light text-white">
         <Card.Img src={blueBG} alt="Card image" />
         <Card.ImgOverlay>
@@ -148,12 +148,33 @@ const FormResult = () => {
             <br />
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <Card style={{background: '#4380cb', color: 'white'}}>
+              <Card.Header>Rain Volume{'(mm)'}</Card.Header>
+              <Card.Body>
+                <Card.Title>{details && details.rain && details.rain['1h']}</Card.Title>
+              </Card.Body>
+            </Card>
+            <br />
+          </Col>
+          <Col>
+            <Card style={{background: '#418bab', color: 'white'}}>
+              <Card.Header>Wind Direction{'(deg)'}</Card.Header>
+              <Card.Body>
+                <Card.Title>{details && details.wind && details.wind.deg}</Card.Title>
+              </Card.Body>
+            </Card>
+            <br />
+          </Col>
+        </Row>
       </Container-fluid>
       <div style={{textAlign: 'center'}}>
         <Link to="/Details">
-          <Button type="button" variant="primary">See Details</Button>{' '}
+          <Button type="button" variant="primary">See more</Button>{' '}
         </Link>
       </div>
+      <br />
     </div>
   );
 };

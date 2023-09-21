@@ -1,0 +1,19 @@
+.footerRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0 1em;
+  font-size: 1.125rem;
+  opacity: 0.8;
+  border: 2px solid yellow;
+}
+
+.footerRow p:last-of-type {
+  font-size: 1rem;
+  opacity: 0.6;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+}

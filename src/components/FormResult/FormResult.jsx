@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import { fetchLocation } from '../../redux/Home/homeSlice';
 import { fetchDetails } from '../../redux/Details/detailsSlice';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const FormResult = () => {
   const location = useSelector((state) => state.form.location);
   const city = useSelector((state) => state.home.location);

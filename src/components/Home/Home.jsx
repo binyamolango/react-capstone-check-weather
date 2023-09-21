@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Form from '../Form/Form';
 import FormResult from '../FormResult/FormResult';
+import Search from '../Search/Search';
 
 const Home = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -26,13 +26,13 @@ const Home = () => {
 
   return (
     <>
+      <Search />
       <h1>Home</h1>
       <div>
         <h3>Current time and date:</h3>
         <p> { formattedDate } </p>
       </div>
       <FormResult />
-      <Form />
     </>
   );
 };

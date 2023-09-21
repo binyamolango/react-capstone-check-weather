@@ -60,7 +60,14 @@ const Search = ({ brandName }) => {
 };
 
 Search.propTypes = {
-  brandName: PropTypes.string.isRequired,
+  brandName: PropTypes.oneOfType([
+    PropTypes.element.isRequired,
+    PropTypes.string.isRequired,
+  ]),
+};
+
+Search.defaultProps = {
+  brandName: 'Default Value',
 };
 
 export default Search;

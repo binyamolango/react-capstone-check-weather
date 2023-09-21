@@ -147,7 +147,7 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card style={{ background: '#418bab4d', color: 'white' }}>
+            <Card style={{ background: '#418bab', color: 'white' }}>
               <Card.Header>
                 Wind Speed
                 (m/s)
@@ -159,7 +159,7 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card style={{ background: '#4380cb4d', color: 'white' }}>
+            <Card style={{ background: '#4380cb', color: 'white' }}>
               <Card.Header>
                 Cloudiness
                 (%)
@@ -173,19 +173,19 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card style={{ background: '#4380cb', color: 'white' }}>
+            <Card style={{ background: '#4380cb4d', color: 'white' }}>
               <Card.Header>
                 Rain Volume
                 (mm)
               </Card.Header>
               <Card.Body>
-                <Card.Title>{details && details.rain && details.rain['1h']}</Card.Title>
+                <Card.Title>{details && details.rain ? details.rain['1h'] : <>0</> }</Card.Title>
               </Card.Body>
             </Card>
             <br />
           </Col>
           <Col>
-            <Card style={{ background: '#418bab', color: 'white' }}>
+            <Card style={{ background: '#418bab4d', color: 'white' }}>
               <Card.Header>
                 Wind Direction
                 (deg)
@@ -201,7 +201,6 @@ const FormResult = () => {
       <div style={{ textAlign: 'center' }}>
         <Link to="/Details">
           <Button type="button" variant="primary">See more</Button>
-          {' '}
         </Link>
       </div>
       <br />

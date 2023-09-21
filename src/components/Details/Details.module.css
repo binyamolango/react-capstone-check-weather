@@ -2,3 +2,8 @@
   height: 100vh;
   background: linear-gradient(to right, #418bab, #4380cb);
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}

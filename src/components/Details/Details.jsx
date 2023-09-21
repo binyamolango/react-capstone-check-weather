@@ -69,80 +69,82 @@ const Details = () => {
         )}
       />
       <Card className={style.detailsPage}>
-        <Card.Header style={{ textAlign: 'center' }}>
-          Detailed Current Weather Condition
+        <Card.Header
+          style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: '600' }}
+        >
+          Current Weather Condition
         </Card.Header>
         <ListGroup variant="flush">
           <ListGroup.Item className={style.row}>
-            <div>Main</div>
+            <div className={style.desc}>Main</div>
             { main }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Description</div>
+            <div className={style.desc}>Description</div>
             { description }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Base</div>
+            <div className={style.desc}>Base</div>
             { base }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Temp</div>
+            <div className={style.desc}>Temp(celsius)</div>
             { temp }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Temp Min</div>
+            <div className={style.desc}>Temp Min(celsius)</div>
             { temp_min }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Temp Max</div>
+            <div className={style.desc}>Temp Max(celsius)</div>
             { temp_max }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Pressure</div>
+            <div className={style.desc}>Pressure(hPa)</div>
             { pressure }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Humidity</div>
+            <div className={style.desc}>Humidity(%)</div>
             { humidity }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Sea Level</div>
+            <div className={style.desc}>Sea Level(hPa)</div>
             { sea_level }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Ground Level</div>
+            <div className={style.desc}>Ground Level(hPa)</div>
             { grnd_level }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Visibility</div>
+            <div className={style.desc}>Visibility(meter)</div>
             { visibility }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Wind Speed</div>
+            <div className={style.desc}>Wind Speed(meter/sec)</div>
             { speed }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Wind Direction</div>
+            <div className={style.desc}>Wind Direction(degrees)</div>
             { deg }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Wind Gust</div>
+            <div className={style.desc}>Wind Gust(meter/sec)</div>
             { gust }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Rain</div>
+            <div className={style.desc}>Rain(mm)</div>
             { rain }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Cloudiness</div>
+            <div className={style.desc}>Cloudiness(%)</div>
             { clouds }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Sun Rise</div>
+            <div className={style.desc}>Sun Rise(unix, UTC)</div>
             { sunrise }
           </ListGroup.Item>
           <ListGroup.Item className={style.row}>
-            <div>Sun Set</div>
+            <div className={style.desc}>Sun Set(unix, UTC)</div>
             { sunset }
           </ListGroup.Item>
         </ListGroup>

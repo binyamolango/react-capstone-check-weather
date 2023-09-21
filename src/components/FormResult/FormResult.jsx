@@ -101,7 +101,7 @@ const FormResult = () => {
         <Row>
           <Col>
             <Card className={style.card} style={{ background: '#418bab' }}>
-              <Card.Header>Weather Condition</Card.Header>
+              <Card.Header className={style.cardHeader}>Weather Condition</Card.Header>
               <Card.Body>
                 <Card.Title>
                   {
@@ -116,7 +116,7 @@ const FormResult = () => {
           </Col>
           <Col>
             <Card className={style.card} style={{ background: '#4380cb' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Temp
                 (Celsius)
               </Card.Header>
@@ -130,7 +130,7 @@ const FormResult = () => {
         <Row>
           <Col>
             <Card className={style.card} style={{ background: '#4380cb4d' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Pressure
                 (hPa)
               </Card.Header>
@@ -142,7 +142,7 @@ const FormResult = () => {
           </Col>
           <Col>
             <Card className={style.card} style={{ background: '#418bab4d' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Humidity
                 (%)
               </Card.Header>
@@ -156,7 +156,7 @@ const FormResult = () => {
         <Row>
           <Col>
             <Card className={style.card} style={{ background: '#418bab' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Wind Speed
                 (m/s)
               </Card.Header>
@@ -168,7 +168,7 @@ const FormResult = () => {
           </Col>
           <Col>
             <Card className={style.card} style={{ background: '#4380cb' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Cloudiness
                 (%)
               </Card.Header>
@@ -182,7 +182,7 @@ const FormResult = () => {
         <Row>
           <Col>
             <Card className={style.card} style={{ background: '#4380cb' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Rain Volume
                 (mm)
               </Card.Header>
@@ -194,7 +194,7 @@ const FormResult = () => {
           </Col>
           <Col>
             <Card className={style.card} style={{ background: '#418bab4d' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Wind Direction
                 (deg)
               </Card.Header>

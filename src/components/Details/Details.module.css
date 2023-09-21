@@ -9,7 +9,15 @@
   justify-content: space-between;
   align-items: center;
   background: #418bab;
+  color: bisque;
+  padding: 1em;
+}
+
+.desc {
+  font-size: 1.125rem;
+  font-style: italic;
   color: white;
+  font-weight: 500;
 }
 
 .row:nth-of-type(even) {

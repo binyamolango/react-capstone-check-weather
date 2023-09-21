@@ -1,10 +1,10 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import Search from "../components/Search/Search";
-import mockStore from '../__mocks__/reduxMock';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
+import mockStore from '../__mocks__/reduxMock';
+import Search from '../components/Search/Search';
 
 const initialState = {
   location: [],
@@ -19,7 +19,7 @@ describe('Search', () => {
         <BrowserRouter>
           <Search />
         </BrowserRouter>
-      </Provider>
+      </Provider>,
     );
 
     const inputField = screen.getByPlaceholderText('London,GB');
@@ -32,7 +32,7 @@ describe('Search', () => {
         <BrowserRouter>
           <Search />
         </BrowserRouter>
-      </Provider>
+      </Provider>,
     );
 
     const inputField = screen.getByPlaceholderText('London,GB');
@@ -51,7 +51,7 @@ describe('Search', () => {
         <BrowserRouter>
           <Search />
         </BrowserRouter>
-      </Provider>
+      </Provider>,
     );
 
     const inputField = screen.getByPlaceholderText('London,GB');

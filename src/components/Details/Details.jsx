@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchDetails } from '../../redux/Details/detailsSlice';
+import style from './Details.module.css';
+import Search from '../Search/Search';
 
 const Details = () => {
   const details = useSelector((state) => state.details.details);
@@ -20,16 +22,18 @@ const Details = () => {
   }, [dispatch, lat, lon]);
 
   return (
-    <>
+    <div className={style.detailsPage}>
+      <Search />
       <p>
         {' '}
         { details && details.main && details.main.temp }
         {' '}
-        deg,{' '}
+        deg,
+        {' '}
         { details && details.weather && details.weather[0] && details.weather[0].description }
       </p>
-      <Link to="/"><button type='button'>Go Back</button></Link>
-    </>
+      <Link to="/"><button type="button">Go Back</button></Link>
+    </div>
   );
 };
 

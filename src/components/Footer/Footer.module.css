@@ -1,3 +1,7 @@
+.footer {
+  padding: 0.5em 0;
+}
+
 .footerRow {
   display: flex;
   flex-wrap: wrap;
@@ -7,13 +11,11 @@
   padding: 0 1em;
   font-size: 1.125rem;
   opacity: 0.8;
-  border: 2px solid yellow;
+  height: 30px;
+  max-height: 50px;
 }
 
 .footerRow p:last-of-type {
   font-size: 1rem;
   opacity: 0.6;
-  border: 2px solid red;
-  display: flex;
-  align-items: center;
 }

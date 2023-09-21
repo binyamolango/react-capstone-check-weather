@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
 import formReducer from './form/formSlice';
 import homeReducer from './Home/homeSlice';
 import detailsReducer from './Details/detailsSlice';
-import thunk from 'redux-thunk';
 
 const store = configureStore({
   reducer: {

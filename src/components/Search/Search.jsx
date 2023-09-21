@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { setLocation } from '../../redux/form/formSlice';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -8,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { setLocation } from '../../redux/form/formSlice';
 
 const Search = () => {
   const [inputValue, setInputValue] = useState('');
@@ -26,7 +26,7 @@ const Search = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand href="#" style={{fontWeight: '500', fontSize: '1.5rem'}}>Check Current Weather</Navbar.Brand>
+          <Navbar.Brand href="#" style={{ fontWeight: '500', fontSize: '1.5rem' }}>Check Current Weather</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav

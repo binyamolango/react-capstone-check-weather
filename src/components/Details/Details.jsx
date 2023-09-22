@@ -16,7 +16,7 @@ import Footer from '../Footer/Footer';
 import style from './Details.module.css';
 
 const Details = () => {
-  const details = useSelector((state) => state.details.details);
+  const { loading, details, error } = useSelector((state) => state.details);
   const city = useSelector((state) => state.home.location);
   const dispatch = useDispatch();
   const cityName = city && city[0] && city[0].name;
@@ -68,10 +68,10 @@ const Details = () => {
           </>
         )}
       />
+      { loading && <div>loading...</div> }
+      { !loading && error.length > 0 && error }
       <Card className={style.detailsPage}>
-        <Card.Header
-          style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: '600' }}
-        >
+        <Card.Header className={style.cardHeader}>
           Current Weather Condition
         </Card.Header>
         <ListGroup variant="flush">

@@ -14,8 +14,8 @@ import { fetchLocation } from '../../redux/Home/homeSlice';
 import style from './FormResult.module.css';
 
 const FormResult = () => {
-  const location = useSelector((state) => state.search.location);
-  const city = useSelector((state) => state.home.location);
+  const search = useSelector((state) => state.search.location);
+  const { loading, location, error } = useSelector((state) => state.home);
   const details = useSelector((state) => state.details.details);
   const dispatch = useDispatch();
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -40,14 +40,14 @@ const FormResult = () => {
   });
 
   useEffect(() => {
-    dispatch(fetchLocation(location));
-  }, [dispatch, location]);
+    dispatch(fetchLocation(search));
+  }, [dispatch, search]);
 
   let lat = 0;
   let lon = 0;
-  if (city.length > 0) {
-    lat = city[0].lat;
-    lon = city[0].lon;
+  if (location.length > 0) {
+    lat = location[0].lat;
+    lon = location[0].lon;
   }
 
   useEffect(() => {
@@ -56,6 +56,8 @@ const FormResult = () => {
 
   return (
     <div style={{ background: 'linear-gradient(to right, #418bab, #4380cb)' }}>
+      { loading && <div>loading...</div> }
+      { !loading && error.length > 0 && error }
       <Card className="bg-light text-white">
         <Card.Img src={blueBG} alt="Card image" />
         <Card.ImgOverlay>
@@ -69,23 +71,23 @@ const FormResult = () => {
           </h3>
           <Card.Title>
             <h1>
-              {city && city[0] && city[0].name}
+              {location && location[0] && location[0].name}
               ,
               {' '}
-              {city && city[0] && city[0].state && city[0].state}
+              {location && location[0] && location[0].state && location[0].state}
               ,
               {' '}
-              {city && city[0] && city[0].country && city[0].country}
+              {location && location[0] && location[0].country && location[0].country}
               {' '}
             </h1>
           </Card.Title>
           <Card.Text>
             lon:
             {' '}
-            {city && city[0] && city[0].lon}
+            {location && location[0] && location[0].lon}
             , lat:
             {' '}
-            {city && city[0] && city[0].lat}
+            {location && location[0] && location[0].lat}
           </Card.Text>
           <Card.Text>
             <div>

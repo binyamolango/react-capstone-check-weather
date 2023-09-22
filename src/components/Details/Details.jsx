@@ -21,24 +21,24 @@ const Details = () => {
   const dispatch = useDispatch();
   const cityName = city && city[0] && city[0].name;
   const country = city && city[0] && city[0].country;
-  const { main, description } = details && details.weather && details.weather[0];
-  const base = details && details.base;
-  const {
-    temp,
-    temp_min,
-    temp_max,
-    pressure,
-    humidity,
-  } = details && details.main;
-  const sea_level = details && details.main.sea_level ? details.main.sea_level : <div>-</div>;
-  const grnd_level = details && details.main.grnd_level ? details.main.grnd_level : <div>-</div>;
-  const visibility = details && details.visibility;
-  const { speed, deg } = details && details.wind;
-  const gust = details && details.wind.gust ? details.wind.gust : <div>-</div>;
-  const rain = details && details.rain ? details.rain['1h'] : <div>-</div>;
-  const clouds = details && details.clouds && details.clouds.all;
-  const sunrise = details && details.sys && details.sys.sunrise;
-  const sunset = details && details.sys && details.sys.sunset;
+  const main = details?.weather?.[0]?.main;
+  const description = details?.weather?.[0]?.description;
+  const base = details?.base;
+  const temp = details?.main?.temp;
+  const temp_min = details?.main?.temp_min;
+  const temp_max = details?.main?.temp_max;
+  const pressure = details?.main?.pressure;
+  const humidity = details?.main?.humidity;
+  const sea_level = details?.main?.sea_level || '-';
+  const grnd_level = details?.main?.grnd_level || '-';
+  const visibility = details?.visibility;
+  const speed = details?.wind?.speed;
+  const deg = details?.wind?.deg;
+  const gust = details?.wind?.gust || '-';
+  const rain = details?.rain?.['1h'] || '-';
+  const clouds = details?.clouds?.all;
+  const sunrise = details?.sys?.sunrise;
+  const sunset = details?.sys?.sunset;
 
   let lat = 0;
   let lon = 0;

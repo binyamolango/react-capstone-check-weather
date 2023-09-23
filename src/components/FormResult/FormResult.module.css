@@ -1,4 +1,9 @@
 .card {
+  color: bisque;
+}
+
+.cardHeader {
+  font-style: italic;
   color: white;
 }
 

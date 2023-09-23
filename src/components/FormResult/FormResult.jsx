@@ -14,8 +14,8 @@ import { fetchLocation } from '../../redux/Home/homeSlice';
 import style from './FormResult.module.css';
 
 const FormResult = () => {
-  const location = useSelector((state) => state.search.location);
-  const city = useSelector((state) => state.home.location);
+  const search = useSelector((state) => state.search.location);
+  const { loading, location, error } = useSelector((state) => state.home);
   const details = useSelector((state) => state.details.details);
   const dispatch = useDispatch();
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -40,14 +40,14 @@ const FormResult = () => {
   });
 
   useEffect(() => {
-    dispatch(fetchLocation(location));
-  }, [dispatch, location]);
+    dispatch(fetchLocation(search));
+  }, [dispatch, search]);
 
   let lat = 0;
   let lon = 0;
-  if (city.length > 0) {
-    lat = city[0].lat;
-    lon = city[0].lon;
+  if (location.length > 0) {
+    lat = location[0].lat;
+    lon = location[0].lon;
   }
 
   useEffect(() => {
@@ -56,6 +56,8 @@ const FormResult = () => {
 
   return (
     <div style={{ background: 'linear-gradient(to right, #418bab, #4380cb)' }}>
+      { loading && <div>loading...</div> }
+      { !loading && error.length > 0 && error }
       <Card className="bg-light text-white">
         <Card.Img src={blueBG} alt="Card image" />
         <Card.ImgOverlay>
@@ -69,23 +71,23 @@ const FormResult = () => {
           </h3>
           <Card.Title>
             <h1>
-              {city && city[0] && city[0].name}
+              {location && location[0] && location[0].name}
               ,
               {' '}
-              {city && city[0] && city[0].state && city[0].state}
+              {location && location[0] && location[0].state && location[0].state}
               ,
               {' '}
-              {city && city[0] && city[0].country && city[0].country}
+              {location && location[0] && location[0].country && location[0].country}
               {' '}
             </h1>
           </Card.Title>
           <Card.Text>
             lon:
             {' '}
-            {city && city[0] && city[0].lon}
+            {location && location[0] && location[0].lon}
             , lat:
             {' '}
-            {city && city[0] && city[0].lat}
+            {location && location[0] && location[0].lat}
           </Card.Text>
           <Card.Text>
             <div>
@@ -101,7 +103,7 @@ const FormResult = () => {
         <Row>
           <Col>
             <Card className={style.card} style={{ background: '#418bab' }}>
-              <Card.Header>Weather Condition</Card.Header>
+              <Card.Header className={style.cardHeader}>Weather Condition</Card.Header>
               <Card.Body>
                 <Card.Title>
                   {
@@ -116,7 +118,7 @@ const FormResult = () => {
           </Col>
           <Col>
             <Card className={style.card} style={{ background: '#4380cb' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Temp
                 (Celsius)
               </Card.Header>
@@ -130,7 +132,7 @@ const FormResult = () => {
         <Row>
           <Col>
             <Card className={style.card} style={{ background: '#4380cb4d' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Pressure
                 (hPa)
               </Card.Header>
@@ -142,7 +144,7 @@ const FormResult = () => {
           </Col>
           <Col>
             <Card className={style.card} style={{ background: '#418bab4d' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Humidity
                 (%)
               </Card.Header>
@@ -155,8 +157,8 @@ const FormResult = () => {
         </Row>
         <Row>
           <Col>
-            <Card className={style.card} style={{ background: '#418bab' }}>
-              <Card.Header>
+            <Card className={style.card} style={{ background: '#418bab4d' }}>
+              <Card.Header className={style.cardHeader}>
                 Wind Speed
                 (m/s)
               </Card.Header>
@@ -168,7 +170,7 @@ const FormResult = () => {
           </Col>
           <Col>
             <Card className={style.card} style={{ background: '#4380cb' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Cloudiness
                 (%)
               </Card.Header>
@@ -182,7 +184,7 @@ const FormResult = () => {
         <Row>
           <Col>
             <Card className={style.card} style={{ background: '#4380cb' }}>
-              <Card.Header>
+              <Card.Header className={style.cardHeader}>
                 Rain Volume
                 (mm)
               </Card.Header>
@@ -193,8 +195,8 @@ const FormResult = () => {
             <br />
           </Col>
           <Col>
-            <Card className={style.card} style={{ background: '#418bab4d' }}>
-              <Card.Header>
+            <Card className={style.card} style={{ background: '#418bab' }}>
+              <Card.Header className={style.cardHeader}>
                 Wind Direction
                 (deg)
               </Card.Header>

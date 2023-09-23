@@ -2,20 +2,17 @@
 
 <div align="center">
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Space Travelers' Hub
+# Check Weather
 
 </div>
-
 <!-- TABLE OF CONTENTS -->
 
   <summary>
     <h1>📗 Table of Contents</h1>
   </summary>
 
-- [Space Travelers' Hub](#space-travelers-hub)
-- [📖 Space Travelers' Hub ](#-space-travelers-hub-)
+- [Check Weather](#Check-Weather)
+- [📖 Check Weather ](#-Check-weather-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -36,14 +33,14 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Space Travelers' Hub <a name="about-project"></a>
+# 📖 Check Weather <a name="about-project"></a>
 
-> **Space Travelers' Hub** is a website that will be working with the real live data from the SpaceX API for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+> **Check Weather** is a mobile web application that lets the user check the weather conditions of any city around the globe.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-- ReactJs
-- Javascript
+- React
+- Redux
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -56,9 +53,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Fetch and render Missions & Rockets data.**
-- **Join/Leave Missions.**
-- **Reserve/Cancel reservation of Rockets.**
+- **Search for any city to check the weather conditions**
+- **Fetch and render the weather conditions**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -66,11 +62,11 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Soon]()
+- [Watch live](https://650f3bda05a9c70008bfa385--splendorous-pika-3664de.netlify.app/)
 
-<!--
-- [Video presentation](https://www.loom.com/share/)
--->
+
+- [Video presentation](https://www.loom.com/share/2d6b5706d84e4d389b96b9c64506de58?sid=48051d19-ba5d-48ac-87c8-91e8a64b989d)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +74,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+If you want to get a local copy up and running, please follow these steps.
 
 ### Prerequisites
 
@@ -98,7 +94,7 @@ In order to run this project you need:
 - [ ] Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/yusufyusie/space-travelers-hub.git
+git clone https://github.com/binyamolango/react-capstone-check-weather.git
 ```
 
 ```
@@ -147,19 +143,7 @@ npm run build
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
-
-👤 **yesuf Fenta**
-
-- GitHub: [@yusufyusie](https://github.com/yusufyusie)
-- Twitter: [@yusufyusiee](https://twitter.com/yusufyusiee)
-- LinkedIn: [Yesuf Fenta](https://www.linkedin.com/in/yusufyusie/)
-
-👤 **May Pyone**
-
-- GitHub: [@githubhandle](https://github.com/MayPyone)
-- Twitter: [@twitterhandle](https://twitter.com/maypyone015)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/may-pyone-9439961a3/)
+## 👥 Author <a name="authors"></a>
 
 👤 **Binyam Yohannes**
 
@@ -198,7 +182,7 @@ If you like this project then don't forget to give a star ⭐ on this repository
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank **![](https://img.shields.io/badge/Microverse-blueviolet).**
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

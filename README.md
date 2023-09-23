@@ -5,7 +5,6 @@
 # Check Weather
 
 </div>
-
 <!-- TABLE OF CONTENTS -->
 
   <summary>

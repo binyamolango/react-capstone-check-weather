@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 import axios from 'axios';
 
-const apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?';
+const apiUrl = 'https://api.openweathermap.org/geo/1.0/direct?';
 const apiKey = '2232c5e8aed5dbe6ed27ba7903d26b62';
 
 const fetchLocation = createAsyncThunk('home/fetchLocation', async (location) => {

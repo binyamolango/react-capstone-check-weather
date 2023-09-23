@@ -183,7 +183,7 @@ If you like this project then don't forget to give a star ⭐ on this repository
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank **![](https://img.shields.io/badge/Microverse-blueviolet).**
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Check Weather
 
 </div>

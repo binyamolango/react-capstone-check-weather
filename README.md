@@ -67,9 +67,9 @@
 
 - [Soon]()
 
-<!--
-- [Video presentation](https://www.loom.com/share/)
--->
+
+- [Video presentation](https://www.loom.com/share/2d6b5706d84e4d389b96b9c64506de58?sid=e2be3f3c-cfb4-4544-9161-ed6653530ed9)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

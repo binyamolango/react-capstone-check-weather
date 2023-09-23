@@ -14,8 +14,8 @@
     <h1>📗 Table of Contents</h1>
   </summary>
 
-- [Space Travelers' Hub](#space-travelers-hub)
-- [📖 Space Travelers' Hub ](#-space-travelers-hub-)
+- [Check Weather](#Check-Weather)
+- [📖 Check Weather ](#-Check-weather-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)

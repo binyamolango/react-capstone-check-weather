@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-import { fetchDetails } from '../../redux/Details/detailsSlice';
+import { fetchDetails } from '../../redux/details/detailsSlice';
 import Search from '../Search/Search';
 import Footer from '../Footer/Footer';
 import style from './Details.module.css';
@@ -63,7 +63,7 @@ const Details = () => {
               />
             </Link>
             { cityName }
-            {' '}
+            {', '}
             { country }
           </>
         )}

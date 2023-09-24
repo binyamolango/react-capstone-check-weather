@@ -9,8 +9,8 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import blueBG from '../../assets/blueBackground.png';
-import { fetchDetails } from '../../redux/Details/detailsSlice';
-import { fetchLocation } from '../../redux/Home/homeSlice';
+import { fetchDetails } from '../../redux/details/detailsSlice';
+import { fetchLocation } from '../../redux/home/homeSlice';
 import style from './FormResult.module.css';
 
 const FormResult = () => {
@@ -90,11 +90,9 @@ const FormResult = () => {
             {location && location[0] && location[0].lat}
           </Card.Text>
           <Card.Text>
-            <div>
-              <Link to="/Details">
-                <Button type="button" variant="primary">See Details</Button>
-              </Link>
-            </div>
+            <Link to="/Details">
+              <Button type="button" variant="primary">See Details</Button>
+            </Link>
           </Card.Text>
         </Card.ImgOverlay>
       </Card>

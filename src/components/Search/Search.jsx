@@ -27,9 +27,9 @@ const Search = ({ brandName }) => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand href="#" style={{ fontWeight: '500', fontSize: '1.5rem' }}>
+          <div style={{ fontWeight: '500', fontSize: '1.5rem', alignSelf: 'center' }}>
             {brandName}
-          </Navbar.Brand>
+          </div>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav

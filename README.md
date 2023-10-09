@@ -62,7 +62,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Watch live](https://650f3bda05a9c70008bfa385--splendorous-pika-3664de.netlify.app/)
+- [Watch live](https://weathercheckerby.netlify.app/)
 
 
 - [Video presentation](https://www.loom.com/share/2d6b5706d84e4d389b96b9c64506de58?sid=48051d19-ba5d-48ac-87c8-91e8a64b989d)
